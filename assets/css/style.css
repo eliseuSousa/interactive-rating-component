@@ -21,6 +21,7 @@ section.card nav.lista-avaliacao button.item {
   font-size: 1.2rem;
   font-weight: 700;
   padding: 1.6rem 2rem;
+  text-transform: uppercase;
   transition: .3s all;
 }
 
@@ -33,7 +34,6 @@ section.card nav.lista-avaliacao button.item:hover {
   background: var(--orange);
   color: var(--white);
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 section.card button.submit {

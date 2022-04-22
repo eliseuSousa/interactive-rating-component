@@ -47,3 +47,10 @@ section.card p.paragrafo {
   font-weight: 400;
   color: var(--light-grey);
 }
+
+@media screen and (max-width: 425px){
+  section.card {
+    margin: 100px 0;
+    padding: 3.2rem 1.6rem;
+  }
+}

@@ -24,6 +24,11 @@ section.card nav.lista-avaliacao button.item {
   transition: .3s all;
 }
 
+section.card nav.lista-avaliacao button.focus {
+  background: var(--light-grey);
+  color: var(--white);
+}
+
 section.card nav.lista-avaliacao button.item:hover {
   background: var(--orange);
   color: var(--white);

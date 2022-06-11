@@ -1,6 +1,6 @@
 (() => {
   const listaAvaliacao = document.querySelector('.lista-avaliacao');
-  const buttons = document.querySelectorAll('.lista-avaliacao > button');
+  const buttons = document.querySelectorAll('.item');
   const buttonSubmit = document.querySelector('.submit');
 
   buttonSubmit.addEventListener('click', () => {
@@ -10,24 +10,14 @@
     window.location.href = './thank-you.html';
   })
 
-  listaAvaliacao.addEventListener('click', ()=> {
-    addFocusButton();
+  function activeButton() {
+    buttons.forEach((button) => {
+      button.classList.remove('focus');
+      this.classList.add('focus');
+    })
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', activeButton);
   })
-
-  function addFocusButton() {
-    buttons.forEach((key)=>{
-      key.addEventListener('click', ()=> {
-        removeFocusButton();
-        key.setAttribute('class', 'item focus');
-      })
-    });
-  }
-
-  function removeFocusButton() {
-    let button;
-    for (let i = 0; i < buttons.length; i++) {
-      button = buttons[i];
-      button.setAttribute('class', 'item');
-    }
-  }
 })();
